@@ -1,0 +1,263 @@
+.study-reflection {
+  margin-top: 18px;
+}
+
+.study-plan-panel {
+  margin: -8px 0 18px;
+}
+
+.study-plan-head {
+  align-items: flex-start;
+}
+
+.study-plan-head .panel-head p {
+  max-width: 640px;
+  line-height: 1.5;
+}
+
+.study-plan-progress {
+  flex: none;
+  color: var(--burgundy, #2f6f4f);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.study-plan-progress-track {
+  height: 6px;
+  margin: 0 0 9px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #edf0f5;
+}
+
+.study-plan-progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--burgundy-bright, #5a8d6e);
+  transition: width 180ms ease;
+}
+
+.study-plan-tasks {
+  display: grid;
+}
+
+.study-plan-task {
+  display: grid;
+  grid-template-columns: 18px 48px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 4px;
+  border-bottom: 1px solid #edf0f5;
+  cursor: pointer;
+}
+
+.study-plan-task:last-child {
+  border-bottom: 0;
+}
+
+.study-plan-task input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--burgundy, #2f6f4f);
+}
+
+.study-plan-task-day {
+  color: #737e92;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.study-plan-task-title {
+  color: #354158;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.study-plan-task small {
+  color: #8992a5;
+  font-size: 10px;
+}
+
+.study-plan-task.is-done .study-plan-task-title {
+  color: #8992a5;
+  text-decoration: line-through;
+}
+
+.study-plan-error {
+  margin: 8px 0 0;
+  color: #b33d35;
+  font-size: 11px;
+}
+
+.study-reflection .panel-head {
+  align-items: flex-start;
+}
+
+.study-reflection-icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--burgundy-pale, #f3ecdf);
+  color: var(--burgundy, #2f6f4f);
+}
+
+.reflection-prompt {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 14px;
+  color: #59657b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.reflection-prompt select,
+.reflection-prompt textarea {
+  width: 100%;
+  border: 1px solid #e1e6ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #172033;
+  font-size: 12px;
+}
+
+.reflection-prompt select {
+  max-width: 260px;
+  padding: 9px 11px;
+}
+
+.reflection-prompt textarea {
+  min-height: 96px;
+  padding: 11px 12px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.reflection-prompt textarea:focus,
+.reflection-prompt select:focus {
+  border-color: var(--burgundy-bright, #5a8d6e);
+  outline: 2px solid color-mix(in srgb, var(--burgundy-bright, #5a8d6e) 20%, transparent);
+}
+
+.reflection-confidence {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 2px 0 14px;
+  color: #59657b;
+  font-size: 11px;
+}
+
+.reflection-confidence > div {
+  display: flex;
+  gap: 5px;
+}
+
+.reflection-confidence button {
+  width: 27px;
+  height: 27px;
+  border: 1px solid #e1e6ef;
+  border-radius: 50%;
+  background: #fff;
+  color: #657087;
+  font-size: 11px;
+}
+
+.reflection-confidence button.selected {
+  border-color: var(--burgundy, #2f6f4f);
+  background: var(--burgundy, #2f6f4f);
+  color: #fff;
+}
+
+.reflection-confidence small {
+  flex-basis: 100%;
+  color: #8992a5;
+  font-size: 10px;
+}
+
+.reflection-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reflection-notice,
+.reflection-error {
+  color: #25805d;
+  font-size: 11px;
+}
+
+.reflection-error {
+  color: #b33d35;
+}
+
+.reflection-history {
+  margin-top: 20px;
+  border-top: 1px solid #edf0f5;
+  padding-top: 16px;
+}
+
+.reflection-history h4 {
+  margin: 0 0 8px;
+  color: #354158;
+  font-size: 12px;
+}
+
+.reflection-entry {
+  padding: 10px 0;
+  border-top: 1px solid #f0f2f6;
+}
+
+.reflection-entry > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reflection-entry b {
+  color: #354158;
+  font-size: 11px;
+}
+
+.reflection-entry small {
+  flex: none;
+  color: #929bad;
+  font-size: 9px;
+}
+
+.reflection-entry p {
+  margin: 5px 0 0;
+  color: #737e92;
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 520px) {
+  .study-plan-task {
+    grid-template-columns: 18px 40px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .study-plan-task small {
+    grid-column: 3;
+  }
+
+  .reflection-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reflection-entry > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+  }
+}
